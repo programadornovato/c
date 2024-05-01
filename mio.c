@@ -1,23 +1,19 @@
 #include <stdio.h>
 int main(){
-	
-	float a,b,c,d,e,f,res;
-	printf("Humano por favor ingresa estos datos:\n");
+	int a,b,aux;
+	printf("Humano ingresa estos valores:\n");
 	printf("Valor de a:");
-	scanf("%f",&a);
+	scanf("%d",&a);
 	printf("Valor de b:");
-	scanf("%f",&b);
-	printf("Valor de c:");
-	scanf("%f",&c);
-	printf("Valor de d:");
-	scanf("%f",&d);
-	printf("Valor de e:");
-	scanf("%f",&e);
-	printf("Valor de f:");
-	scanf("%f",&f);
-
-	res=(a+(b/c)) / (d+(e/f));
-	printf("Humano este es el resltado:%.2f\n",res);
+	scanf("%d",&b);
+	//aux=10
+	aux=a;
+	//a=5
+	a=b;
+	//b=10
+	b=aux;
+	printf("Valor de a:%d\n",a);
+	printf("Valor de b:%d\n",b);
 	system("pause");
 	return 0;
 
