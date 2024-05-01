@@ -1,13 +1,13 @@
-/*Mi primer programa desde 0 */
 #include <stdio.h>
 int main(){
-	printf("Soy un cosa pero barbara");
-	getchar();
-	printf("Verdad?");
-	getchar();
-	printf("Tu que crees?");
-	getchar();
-	printf("Pero dime algo");
+	int entero=10.5;
+	float flotante=5.5;
+	double doble=55.6666;
+	char c='c';
+	printf("Entero=%d\n",entero);
+	printf("Flotante=%f\n",flotante);
+	printf("Doble=%lf\n",doble);
+	printf("Caracter=%c\n",c);
 	return 0;
 }
 
