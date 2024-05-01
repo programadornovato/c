@@ -1,23 +1,20 @@
 #include <stdio.h>
 int main(){
-	float n1,n2,suma,resta,mult,div;
+	char sexo[10];
+	int edad;
+	float estatura;
 	
-	printf("Humano ingresa el valor 1:");
-	scanf("%f",&n1);
-	printf("Humano ingresa el valor 2:");
-	scanf("%f",&n2);
+	printf("Humano dame tu sexo:");
+	scanf("%s",sexo);
+	printf("Humano dame tu edad:");
+	scanf("%d",&edad);
+	printf("Humano dame tu estatura:");
+	scanf("%f",&estatura);
 	
-	suma=n1+n2;
-	printf("Humano aqui esta tu pich suma:%f\n",suma);
-	
-	resta=n1-n2;
-	printf("Humano aqui esta tu pich resta:%f\n",resta);
-	
-	mult=n1*n2;
-	printf("Humano aqui esta tu pich multiplicacion:%f\n",mult);
-	
-	div=n1/n2;
-	printf("Humano aqui esta tu pich divicion:%f\n",div);
+	printf("HUMANO AQUI ESTAN TUS PINCHES DATOS\n");
+	printf("Sexo:%s\n",sexo);
+	printf("Edad:%d\n",edad);
+	printf("Estatura:%f\n",estatura);
 	
 	system("pause");
 	return 0;
