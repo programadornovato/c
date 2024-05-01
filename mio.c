@@ -1,23 +1,13 @@
 #include <stdio.h>
+#include <math.h>
 int main(){
-	float practicas,participacion,examen,calFinal;
-	printf("Humano ingresa los siguientes datos:\n");
-	printf("practicas:");
-	scanf("%f",&practicas);
-	printf("participacion:");
-	scanf("%f",&participacion);
-	printf("examen:");
-	scanf("%f",&examen);
-	
-	practicas=practicas*.40;
-	participacion=participacion*.20;
-	examen=examen*.40;
-	
-	calFinal=practicas+participacion+examen;
-	
-	printf("Humano esta es tu calificacion:%.2f\n",calFinal);
-	
-	
+	float x,y,res;
+	printf("Humano ingresa el valor de x:");
+	scanf("%f",&x);
+	printf("Humano ingresa el valor de y:");
+	scanf("%f",&y);
+	res= (sqrt(x)) / (pow(y,2)-1);
+	printf("Humano aqui esta tu chingadera:%.2f\n",res);
 	system("pause");
 	return 0;
 
