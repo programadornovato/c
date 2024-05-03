@@ -1,33 +1,21 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-	int valor;
-	regresar:
-	printf("Humano escribe un numero entre 1 y 5\n");
-	scanf("%d",&valor);
-	switch(valor){
-		case 1:
-			printf("Precionaste el numero uno\n");
-			break;
-		case 2:
-			printf("Precionaste el numero dos\n");
-			break;
-		case 3:
-			printf("Precionaste el numero tres\n");
-			break;
-		case 4:
-			printf("Precionaste el numero cuatro\n");
-			break;
-		case 5:
-			printf("Precionaste el numero cinco\n");
-			break;
-		default:
-			printf("Humano estupido te pedi un numero entre 1 y 5\n");
-			goto regresar;
-			break;
+	int n1,n2;
+	printf("Ingresa el valor del numero 1\n");
+	scanf("%d",&n1);
+	printf("Ingresa el valor del numero 2\n");
+	scanf("%d",&n2);
+	
+	if(n1==n2){
+		printf("Los 2 numeros son iguales\n");
 	}
-	
-	
+	else if(n1>n2){
+		printf("El numero 1 es mayor al numero 2\n");
+	}
+	else{
+		printf("El numero 2 es mayor al numero 1\n");
+	}
 	
 	system("pause");
 	return 0;
