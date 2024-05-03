@@ -1,22 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-	int n1,n2;
-	printf("Ingresa el valor del numero 1\n");
-	scanf("%d",&n1);
-	printf("Ingresa el valor del numero 2\n");
-	scanf("%d",&n2);
-	
-	if(n1==n2){
-		printf("Los 2 numeros son iguales\n");
-	}
-	else if(n1>n2){
-		printf("El numero 1 es mayor al numero 2\n");
+	int numero;
+	printf("Humano escribe un numero entero\n");
+	scanf("%d",&numero);
+	if(numero%2==0){
+		printf("El numero es par\n");
 	}
 	else{
-		printf("El numero 2 es mayor al numero 1\n");
+		printf("El numero es impar\n");
 	}
-	
 	system("pause");
 	return 0;
 
