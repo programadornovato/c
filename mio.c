@@ -1,27 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-	char letra;
-	regresa:
-	printf("Humano ingresa una letra vocal\n");
-	scanf("%c",&letra);
-	switch(letra){
-		case 'a':
-		case 'e':
-		case 'i':
-		case 'o':
-		case 'u':
-		case 'A':
-		case 'E':
-		case 'I':
-		case 'O':
-		case 'U':
-			printf("Bien humano\n");
-			break;
-		default:
-			printf("Humano tonto te pedi una vocal\n");
-			goto regresa;
-			break;
+	int edad;
+	printf("Humano dame la edad del postulante:");
+	scanf("%d",&edad);
+	if(edad >= 18 && edad <= 40 ){
+		printf("La persona es apta para trabajar en nuestra empresa\n");
+	}else{
+		printf("La persona no es apta para trabajar en nuestra empresa\n");
 	}
 	
 	system("pause");
