@@ -1,41 +1,57 @@
 #include <stdio.h>
 int main(){
-	int opcion;
-	float saldo=1000,ingreso,sacar;
-	printf("Hola humano, estas en el banco jerte\n");
-	regreso:
-	printf("Ingresa una opcion\n");
-	printf("Opcion 1. Ingreso de dinero\n");
-	printf("Opcion 2. Sacar de dinero\n");
-	printf("Opcion 3. Salir\n");
-	
-	scanf("%d",&opcion);
-	
-	switch(opcion){
-		case 1:
-			printf("Humano cuanto dinero vas a ingresar:");
-			scanf("%f",&ingreso);
-			saldo=saldo+ingreso;
-			printf("Humano tu cuenta es de %.2f\n",saldo);
-			goto regreso;
-		case 2:
-			printf("Humano cuanto dinero vas a sacar:");
-			scanf("%f",&sacar);
-			if(sacar>saldo){
-				printf("Humano pillin no puedes sacar mas dinero de que ya tienes\n");
-				goto regreso;
-			}else{
-				saldo=saldo-sacar;
-				printf("Humano tu cuenta es de %.2f\n",saldo);
-				goto regreso;
-			}
-		case 3:
-			printf("Adios humano\n");
-			break;
-		default:
-			goto regreso;
+	int numero,unidades,decenas,centenas,millares;
+	printf("Humano ingresa el numero a convertir a romano: ");
+	scanf("%d",&numero);
+	unidades=numero%10; //1234%10=4
+	numero=numero/10;//1234/10=123
+	decenas=numero%10;
+	numero=numero/10;
+	centenas=numero%10;
+	millares=numero/10;
+	//printf("%d,%d,%d,%d\n",unidades,decenas,centenas,millares);
+	switch(millares){
+		case 1: printf("M");break;
+		case 2: printf("MM");break;
+		case 3: printf("MMM");break;
 	}
+	switch(centenas){
+		case 1: printf("C");break;
+		case 2: printf("CC");break;
+		case 3: printf("CCC");break;		
+		case 4: printf("CD");break;		
+		case 5: printf("D");break;		
+		case 6: printf("DC");break;		
+		case 7: printf("DCC");break;		
+		case 8: printf("DCCC");break;		
+		case 9: printf("CM");break;		
+	}
+	switch(decenas){
+		case 1: printf("X");break;
+		case 2: printf("XX");break;
+		case 3: printf("XXX");break;		
+		case 4: printf("XL");break;		
+		case 5: printf("L");break;		
+		case 6: printf("LX");break;		
+		case 7: printf("LXX");break;		
+		case 8: printf("LXXX");break;		
+		case 9: printf("XC");break;		
+	}
+	switch(unidades){
+		case 1: printf("I");break;
+		case 2: printf("II");break;
+		case 3: printf("III");break;		
+		case 4: printf("IV");break;		
+		case 5: printf("V");break;		
+		case 6: printf("VI");break;		
+		case 7: printf("VII");break;		
+		case 8: printf("VIII");break;		
+		case 9: printf("IX");break;		
+	}
+	printf("\n");
 	
+	
+		
 	system("pause");
 	return 0;
 
