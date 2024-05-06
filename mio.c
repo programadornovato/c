@@ -1,11 +1,9 @@
 #include <stdio.h>
 int main(){
-	char letra;
-	do{
-		printf("Humano escribe la letra a:");
-		scanf(" %c",&letra);		
-	}while(letra!='a');
-	printf("Muy bien Humano\n");
+	int i;
+	for(i=10;i>0;i=i-2){
+		printf("%d\n",i);
+	}
 	system("pause");
 	return 0;
 
