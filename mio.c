@@ -1,21 +1,26 @@
 #include <stdio.h>
 int main(){
-	int i,n,mayor=0,arreglo[100];
-	do{
-		printf("Humano ingresa el tamaño del arreglo (maximo de 100):");
-		scanf("%d",&n);
-	}while(n>100);
-	for(i=0;i<n;i++){
-		printf("\nIngresa el valor %d:",(i+1));
-		scanf("%d",&arreglo[i]);
+	
+	int i,vector1[5],vector2[5],vector3[10];
+	for(i=0;i<5;i++){
+		printf("Vector 1 pos %d:",i+1);
+		scanf("%d",&vector1[i]);
 	}
-	//3 4 5 1 2
-	for(i=0;i<n;i++){
-		if(arreglo[i]>mayor){
-			mayor=arreglo[i];
+	for(i=0;i<5;i++){
+		printf("Vector 2 pos %d:",i+1);
+		scanf("%d",&vector2[i]);
+	}
+	for(i=0;i<10;i++){
+		if(i<5){
+			vector3[i]=vector1[i];
+		}
+		else{
+			vector3[i]=vector2[i-5];
 		}
 	}
-	printf("\nHumano aqui esta el numero mayor:%d\n",mayor);
+	for(i=0;i<10;i++){
+		printf("\nvector3 pos %d=%d\n",i+1,vector3[i]);
+	}
 	
 	
 	system("pause");
