@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-	
-	int numero,suma=0;
+
+	int n,factorial=1;
 	do{
-		printf("Humano ingresa un numero, si es 0 o esta en un rango de 100 a 200 se cerrara el programa: ");
-		scanf("%d",&numero);
-		suma=suma+numero;
-		printf("Tu pinche suma es:%d\n",suma);
-	}while( (numero < 100 || numero > 200 ) && (numero!=0) );
-	
+		printf("Humano ingresa un numero mayor a 1:");
+		scanf("%d",&n);
+	}while(n<1);
+	int i;
+	for(i=1;i<=n;i++){
+		factorial=factorial*i;
+		printf("%d*",i);
+	}
+	printf("\nFactorial=%d\n",factorial);
 	system("pause");
 	return 0;
 
