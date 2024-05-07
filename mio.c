@@ -1,11 +1,18 @@
 #include <stdio.h>
 int main(){
-	int suma=0,i,arreglo[]={10,9,8,7,6};
-	for(i=0;i<5;i++){
-		suma=suma+arreglo[i];
-		printf("%d+",arreglo[i]);
+	int i,n,arreglo[100];
+	do{
+		printf("Humano ingresa la cantidad de elementos (maximo 100):");
+		scanf("%d",&n);
+	}while(n>100);
+	for(i=0;i<n;i++){
+		printf("\nHumano ingresa el valor %d\n",(i+1));
+		scanf("%d",&arreglo[i]);
 	}
-	printf("\nLa suma es %d\n",suma);
+	for(i=0;i<n;i++){
+		printf("Indice=%d valor %d\n",(i+1),arreglo[i]);
+	}
+	
 	system("pause");
 	return 0;
 
