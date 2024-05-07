@@ -1,18 +1,23 @@
 #include <stdio.h>
 #include <math.h>
+#include <time.h>
 int main(){
-
-	int n,factorial=1;
+	int n,aleatorio,contador=0;
+	srand(time(NULL));
+	aleatorio= 1 + rand() % 100;
 	do{
-		printf("Humano ingresa un numero mayor a 1:");
+		printf("Humano que numero estoy pensando entre 1 y 100 (%d):",aleatorio);
 		scanf("%d",&n);
-	}while(n<1);
-	int i;
-	for(i=1;i<=n;i++){
-		factorial=factorial*i;
-		printf("%d*",i);
-	}
-	printf("\nFactorial=%d\n",factorial);
+		if(n<aleatorio){
+			printf("Humano estupido tu numero es menor\n");
+		}
+		if(n>aleatorio){
+			printf("Humano estupido tu numero es mayor\n");
+		}
+		contador++;
+	}while(n!=aleatorio);
+	printf("Felicidades Humano pero te equivocaste %d veces\n",contador);
+	
 	system("pause");
 	return 0;
 
