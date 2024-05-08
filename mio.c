@@ -1,28 +1,24 @@
 #include <stdio.h>
 int main(){
-	
-	int i,vector1[5],vector2[5],vector3[10];
-	for(i=0;i<5;i++){
-		printf("Vector 1 pos %d:",i+1);
-		scanf("%d",&vector1[i]);
+	int i,j,matriz[100][100],filas,columnas;
+	printf("Humano cuantas filas quieres:");
+	scanf("%d",&filas);
+	printf("Humano cuantas columnas quieres:");
+	scanf("%d",&columnas);
+	for(i=0;i<filas;i++){
+		for(j=0;j<filas;j++){
+			printf("Valor de [%d][%d]:",i+1,j+1);
+			scanf("%d",&matriz[i][j]);
+		}		
 	}
-	for(i=0;i<5;i++){
-		printf("Vector 2 pos %d:",i+1);
-		scanf("%d",&vector2[i]);
-	}
-	for(i=0;i<10;i++){
-		if(i<5){
-			vector3[i]=vector1[i];
+	printf("\n\n");
+	for(i=0;i<filas;i++){
+		for(j=0;j<filas;j++){
+			printf("[%d]",matriz[i][j]);
 		}
-		else{
-			vector3[i]=vector2[i-5];
-		}
+		printf("\n");
 	}
-	for(i=0;i<10;i++){
-		printf("\nvector3 pos %d=%d\n",i+1,vector3[i]);
-	}
-	
-	
+	printf("\n\n");
 	system("pause");
 	return 0;
 
