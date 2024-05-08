@@ -1,22 +1,16 @@
 #include <stdio.h>
 int main(){
-	char texto1[]="A";
-	char texto2[]="A";
-	int res;
-	res=strcmp(texto1,texto2);
-	//printf("res=%d\n",res);
-	if(res==0){
-		printf("Ambos dos textos son iguales\n");
-	}else{
-		if(res>0){
-			printf("El texto1 es mayor\n");
-		}
-		if(res<0){
-			printf("El texto1 es menor\n");
-		}
-	}
+	char nombre[18],apellido[18],nombreApellido[40]={};
+	printf("Humano dame tu nombre:");
+	scanf("%s",&nombre);
+	printf("Humano dame tu apellido:");
+	scanf("%s",&apellido);
+	strcat(nombreApellido,nombre);
+	strcat(nombreApellido," ");
+	strcat(nombreApellido,apellido);
+	printf("Humano aqui esta tu pinche nombre completo %s\n",nombreApellido);
+	
 	system("pause");
 	return 0;
-
 }
 
