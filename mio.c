@@ -1,14 +1,19 @@
 #include <stdio.h>
 int main(){
-	char nombre[18],apellido[18],nombreApellido[40]={};
-	printf("Humano dame tu nombre:");
-	scanf("%s",&nombre);
-	printf("Humano dame tu apellido:");
-	scanf("%s",&apellido);
-	strcat(nombreApellido,nombre);
-	strcat(nombreApellido," ");
-	strcat(nombreApellido,apellido);
-	printf("Humano aqui esta tu pinche nombre completo %s\n",nombreApellido);
+	char texto[40],reves[40];
+	int res;
+	regresar:
+	printf("Humano ingresa un palindromo:");
+	scanf("%s",texto);
+	strcpy(reves,texto);
+	strrev(reves);
+	res=strcmp(reves,texto);
+	if(res==0){
+		printf("Felicidades humano ahora dame la patita\n");
+	}else{
+		printf("Humano estupido (%s  %s) \n",reves,texto);
+		goto regresar;
+	}
 	
 	system("pause");
 	return 0;
