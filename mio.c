@@ -1,21 +1,23 @@
 #include <stdio.h>
 int main(){
-    char t1[20],t2[20];
-    int res;
-    regresa:
-    printf("Humano ingresa una palabra:");
-    scanf("%s",&t1);
-    printf("Humano ingresa una palabra similar a la anterior (No sencible a mayusculas y minusculas) :");
-    scanf("%s",&t2);
-    strupr(t1);
-    strupr(t2);
-    res=strcmp(t1,t2);
-    if(res==0){
-    	printf("El texto 1 %s es igual al texto 2 %s\n ",t1,t2);
-	}else{
-		printf("El texto 1 %s NO es igual al texto 2 %s\n ",t1,t2);
-		goto regresa;
-	}
+	char tn1[2],tn2[2],t[4];
+	int n1,n2,suma=0;
+	printf("Humano ingresa un numero de 4 digitos:");
+	scanf("%s",&t);
+	
+	tn1[0]=t[0];
+	tn1[1]=t[1];
+	tn1[2]='\n';
+	n1=atoi(tn1);
+	
+	tn2[0]=t[2];
+	tn2[1]=t[3];
+	tn2[2]='\n';
+	n2=atoi(tn2);
+	
+	suma=n1+n2;
+	printf("La suma es de %d + %d = %d\n",n1,n2,suma);
+	
 	system("pause");
 	return 0;
 }
