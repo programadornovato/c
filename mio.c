@@ -1,22 +1,27 @@
 #include <stdio.h>
 int main(){
-	char tn1[2],tn2[2],t[4];
-	int n1,n2,suma=0;
-	printf("Humano ingresa un numero de 4 digitos:");
+
+	int la=0,le=0,li=0,lo=0,lu=0;
+	char t[30];
+	int i;
+	
+	printf("Humano escribe un texto:");
 	scanf("%s",&t);
 	
-	tn1[0]=t[0];
-	tn1[1]=t[1];
-	tn1[2]='\n';
-	n1=atoi(tn1);
-	
-	tn2[0]=t[2];
-	tn2[1]=t[3];
-	tn2[2]='\n';
-	n2=atoi(tn2);
-	
-	suma=n1+n2;
-	printf("La suma es de %d + %d = %d\n",n1,n2,suma);
+	for(i=0;i<30;i++){
+		switch(t[i]){
+			case 'a': case'A':  la++;break;
+			case 'e': case'E':le++;break;
+			case 'i': case'I':li++;break;
+			case 'o': case'O':lo++;break;
+			case 'u': case'U':lu++;break;
+		}
+	}
+	printf("\nLetras a %d\n",la);
+	printf("Letras e %d\n",le);
+	printf("Letras i %d\n",li);
+	printf("Letras o %d\n",lo);
+	printf("Letras u %d\n",lu);
 	
 	system("pause");
 	return 0;
