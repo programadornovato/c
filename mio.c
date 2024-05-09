@@ -1,28 +1,31 @@
 #include <stdio.h>
 int main(){
-
-	int la=0,le=0,li=0,lo=0,lu=0;
-	char t[30];
-	int i;
+	int i,j,aux=0,n[5];
+	for(i=0;i<5;i++){
+		printf("Ingresa el valor %d:",i+1);
+		scanf("%d",&n[i]);
+	}
 	
-	printf("Humano escribe un texto:");
-	scanf("%s",&t);
-	
-	for(i=0;i<30;i++){
-		switch(t[i]){
-			case 'a': case'A':  la++;break;
-			case 'e': case'E':le++;break;
-			case 'i': case'I':li++;break;
-			case 'o': case'O':lo++;break;
-			case 'u': case'U':lu++;break;
+	for(i=0;i<5;i++){
+		for(j=0;j<4;j++){
+			if(n[j]>n[j+1]){
+				aux=n[j];
+				n[j]=n[j+1];
+				n[j+1]=aux;
+				
+			}
 		}
 	}
-	printf("\nLetras a %d\n",la);
-	printf("Letras e %d\n",le);
-	printf("Letras i %d\n",li);
-	printf("Letras o %d\n",lo);
-	printf("Letras u %d\n",lu);
-	
+	printf("\nESTOS SON TUS NUMEROS ORDENADOS ACENDENTE \n");
+	for(i=0;i<5;i++){
+		printf("%d\n",n[i]);
+	}
+
+	printf("\nESTOS SON TUS NUMEROS ORDENADOS DECENDENTE\n");
+	for(i=4;i>=0;i--){
+		printf("%d\n",n[i]);
+	}
+		
 	system("pause");
 	return 0;
 }
