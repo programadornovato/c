@@ -1,23 +1,32 @@
 #include <stdio.h>
-int suma(int,int);
-void mostrarRes(int);
-int main(){
-	int resultado,num1,num2;
-	printf("Humano dame el valor 1:");
-	scanf("%d",&num1);
-	printf("Humano dame el valor 2:");
-	scanf("%d",&num2);
-	resultado=suma(num1,num2);
-	//printf("Suma=%d\n",resultado);
-	mostrarRes(resultado);
-	system("pause");
-	return 0;
+int retornaMulti(int,int);
+void muestraMulti(int,int);
+int main() {
+	int d1,d2;
+	printf("Dato 1:");
+	scanf("%d",&d1);
+	printf("Dato 2:");
+	scanf("%d",&d2);
+	int res=retornaMulti(d1,d2);
+	printf("La multiplicacion es %d\n",res);
+	muestraMulti(d1,d2);
+    system("pause");
+    return 0;
 }
-int suma(int n1,int n2){
+
+int retornaMulti(int n1,int n2){
+	/*
 	int res;
-	res=n1+n2;
+	res=n1*n2;
 	return res;
+	*/
+	return n1*n2;
 }
-void mostrarRes(int res){
-	printf("El resultado=%d\n",res);
+void muestraMulti(int n1,int n2){
+	/*
+	int res;
+	res=n1*n2;
+	printf("La multiplicacion es %d\n",res);
+	*/
+	printf("La multiplicacion es %d\n",n1*n2);
 }
