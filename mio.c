@@ -1,33 +1,18 @@
 #include <stdio.h>
-#include <stdbool.h>
+int suma();
 int main(){
-	int lista[5]={1,2,3,4,5};
-	int n,i;
-	regresa:
-	printf("Escribe algun elemento de esta lista:\n");
-	for(i=0;i<5;i++){
-		printf("%d ",lista[i]);
-	}
-	printf(":");
-	scanf("%d",&n);
-	i=0;
-	int pos=0;
-	bool encontrado=false;
-	while(i<5 && encontrado==false ){
-		if(lista[i]==n){
-			pos=i;
-			encontrado=true;
-			break;
-		}
-		i++;
-	}
-	if(encontrado==true){
-		printf("\nMuy bien humano encontramos el elemento en la posicion %d\n",pos+1);
-	}else{
-		printf("\nHumano estupido intentalo de nuevo\n");
-		goto regresa;
-	}
+	int resultado;
+	resultado=suma();
+	printf("Suma=%d\n",resultado);
 	system("pause");
 	return 0;
 }
-
+int suma(){
+	int res,n1,n2;
+	printf("Humano dame el valor 1:");
+	scanf("%d",&n1);
+	printf("Humano dame el valor 2:");
+	scanf("%d",&n2);
+	res=n1+n2;
+	return res;
+}
